@@ -1,0 +1,5 @@
+<label for="launchYearInput" class="filter-label">Filter by Launch Year:</label>
+<mat-form-field appearance="fill" class="filter-input">
+  <input matInput type="text" id="launchYearInput" [(ngModel)]="launchYear" placeholder="Enter year">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="filterByYear()" class="filter-button">Apply</button>

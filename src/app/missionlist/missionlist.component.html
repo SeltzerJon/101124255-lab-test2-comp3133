@@ -1,0 +1,11 @@
+<app-missionfilter (filterByYearEvent)="applyFilterByYear($event)"></app-missionfilter>
+<app-missiondetails [missionDetails]="selectedMission"></app-missiondetails>
+
+<div *ngFor="let mission of missionsF" (click)="showMissionDetails(mission)">
+  <mat-card>
+    <h2 class="custom-heading">{{ mission.mission_name }}</h2>
+  </mat-card>
+  <p>Launch Year: {{ mission.launch_year }}</p>
+  <p>{{ mission.details }}</p>
+  <img src="{{ mission.links.mission_patch_small }}" alt="Mission Patch">
+</div>
